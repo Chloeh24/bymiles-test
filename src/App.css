@@ -4,5 +4,27 @@
 }
 
 button {
-  padding: 5px 10px
+  background-color: rgb(70, 220, 246);
+  margin-top: 2rem;
+  padding: 0.6rem 2rem;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold
+}
+.heading{
+  text-decoration: underline rgb(245, 114, 67) 3px;
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.login-form label {
+  margin: 0.7rem 0;
+}
+
+.login-form input {
+  line-height: 1.5
 }

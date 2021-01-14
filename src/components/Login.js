@@ -33,7 +33,7 @@ export default function Login(props) {
 
   return (
     <>
-      <h1>Login to your account</h1>
+      <h1 className="heading">Login to your account</h1>
       <form onSubmit={handleLogin} className="login-form">
         <label htmlFor="Username">Username:</label>
         <input

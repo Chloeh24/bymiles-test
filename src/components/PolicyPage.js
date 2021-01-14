@@ -30,7 +30,7 @@ export default function PolicyPage(props) {
 
   return (
     <>
-      <h1>My Policy</h1>
+      <h1 className="heading">My Policy</h1>
       <h3>Policy Reference:</h3>
       <p>{policyData.policy.policy_ref}</p>
       <h3>Cover Type:</h3>
