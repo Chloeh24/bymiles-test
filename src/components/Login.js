@@ -12,6 +12,7 @@ export default function Login(props) {
       headers: {
         "Content-Type": "application/json",
         Environment: "mock",
+        mode: "no-cors",
       },
       body: JSON.stringify({
         username: username,
@@ -50,7 +51,9 @@ export default function Login(props) {
           name="password"
           onChange={(event) => setPassword(event.target.value)}
         ></input>
-        <button type="submit">Login</button>
+        <button className="submit" type="submit">
+          Login
+        </button>
       </form>
     </>
   );

@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <header className="App-header"></header>
       {accessToken ? (
-        <PolicyPage accessToken={accessToken} />
+        <PolicyPage accessToken={accessToken} setAccessToken={setAccessToken} />
       ) : (
         <Login setAccessToken={setAccessToken} />
       )}

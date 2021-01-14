@@ -22,15 +22,15 @@ export default function PolicyPage(props) {
       .catch((err) => console.error(err));
   }, [props.accessToken]);
 
-  //   const handleLogout = (event) => {
-  //     event.preventDefault();
-  //     props.setAccessToken("");
-  //   };
+  const handleLogout = () => {
+    props.setAccessToken("");
+  };
 
-  console.log(policyData);
+  if (!policyData) return <h1>Please wait...</h1>;
+
   return (
     <>
-      <h1>Your Policy Details</h1>
+      <h1>My Policy</h1>
       <h3>Policy Reference:</h3>
       <p>{policyData.policy.policy_ref}</p>
       <h3>Cover Type:</h3>
@@ -42,7 +42,12 @@ export default function PolicyPage(props) {
       </p>
 
       <h3>Address:</h3>
-      {/* <button onClick={handleLogout}>Logout</button> */}
+      <p>
+        {" "}
+        {policyData.policy.address.line_1}, {policyData.policy.address.line_2},{" "}
+        {policyData.policy.address.line_3} {policyData.policy.address.postcode}
+      </p>
+      <button onClick={handleLogout}>Logout</button>
     </>
   );
 }
