@@ -15,7 +15,7 @@ Create a simple web application with a login screen which takes a username and p
 
 ## Notes
 
-- Focused on functionality
+- Focused on functionality and readability of code
 - Assumed that there is no need for form validation as it's using dummy data
 - Added a logout button for easy navigation and reusability
 - Time taken: approx. 4 hours
