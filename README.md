@@ -1,6 +1,6 @@
-# Tiney dashboard test
+# ByMiles tech test
 
-Design a responsive dashboard for members of the tiney team and help them access information about childminders.
+Create a simple web application with a login screen which takes a username and password. Once authorised, it will navigate the user to another page which will display policy details.
 
 ## To run
 
@@ -17,11 +17,11 @@ Design a responsive dashboard for members of the tiney team and help them access
 
 - Focused on functionality
 - Assumed that there is no need for form validation as it's using dummy data
--
+- Added a logout button for easy navigation and reusability
 - Time taken: approx. 4 hours
 
 ## Improvements
 
-- Write
+- Test the Login and Policy page components more thoroughly, maybe using Enzyme
 - Add a loading circle instead of 'please wait' for nicer UX design
 - Edit and improve on styling e.g. use a card design for 'my policy' page

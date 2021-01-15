@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 
-export default function PolicyPage(props) {
+export default function PolicyPage({
+  accessToken,
+  setAccessToken,
+  setErrorMessage,
+}) {
   const [policyData, setPolicyData] = useState("");
 
   useEffect(() => {
-    fetch("https://api.bybits.co.uk/policys/details", {
+    return fetch("https://api.bybits.co.uk/policys/details", {
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${props.accessToken}`,
+        Authorization: `Bearer ${accessToken}`,
         Environment: "mock",
       },
     })
@@ -18,12 +22,15 @@ export default function PolicyPage(props) {
           throw new Error("Could not get user details");
         }
       })
-      .then((result) => setPolicyData(result))
-      .catch((err) => console.error(err));
-  }, [props.accessToken]);
+      .then(setPolicyData)
+      .catch((err) => {
+        setErrorMessage("Error: Could not find your policy details");
+        console.log(err);
+      });
+  }, [accessToken, setErrorMessage]);
 
   const handleLogout = () => {
-    props.setAccessToken("");
+    setAccessToken("");
   };
 
   if (!policyData) return <h1>Please wait...</h1>;

@@ -5,15 +5,23 @@ import PolicyPage from "./components/PolicyPage";
 
 function App() {
   const [accessToken, setAccessToken] = useState("");
-
+  const [errorMessage, setErrorMessage] = useState("");
   return (
     <div className="App">
       <header className="App-header"></header>
       {accessToken ? (
-        <PolicyPage accessToken={accessToken} setAccessToken={setAccessToken} />
+        <PolicyPage
+          accessToken={accessToken}
+          setAccessToken={setAccessToken}
+          setErrorMessage={setErrorMessage}
+        />
       ) : (
-        <Login setAccessToken={setAccessToken} />
+        <Login
+          setErrorMessage={setErrorMessage}
+          setAccessToken={setAccessToken}
+        />
       )}
+      {errorMessage && <p>{errorMessage}</p>}
     </div>
   );
 }

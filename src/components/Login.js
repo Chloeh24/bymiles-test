@@ -28,14 +28,17 @@ export default function Login(props) {
         }
       })
       .then((result) => props.setAccessToken(result.access_token))
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        props.setErrorMessage("Error: Could not log you in");
+        console.log(err);
+      });
   };
 
   return (
     <>
       <h1 className="heading">Login to your account</h1>
       <form onSubmit={handleLogin} className="login-form">
-        <label htmlFor="Username">Username:</label>
+        <label htmlFor="username">Username:</label>
         <input
           required
           type="text"
