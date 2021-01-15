@@ -22,6 +22,6 @@ Create a simple web application with a login screen which takes a username and p
 
 ## Improvements
 
-- Test the Login and Policy page components more thoroughly, maybe using Enzyme
+- Test the Login and Policy page components more thoroughly - if I had more time I would like to learn Enzyme and how to test React components more effectively
 - Add a loading circle instead of 'please wait' for nicer UX design
 - Edit and improve on styling e.g. use a card design for 'my policy' page
